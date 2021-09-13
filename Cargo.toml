@@ -1,0 +1,17 @@
+[package]
+name = "rucli"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "yan"    # bin 文件不要与lib 文件重名
+path = "src/main.rs"
+
+[lib]
+name = "libyan"
+crate-type = ["staticlib", "cdylib"] 
+
+
+[dependencies]
+rocket = "0.5.0-rc.1"

@@ -1,0 +1,18 @@
+[debug]
+address = "127.0.0.1"
+port = 8341
+workers = 1
+keep_alive = 0
+log_level = "normal"
+
+
+
+[release]
+address = "0.0.0.0"
+port = 8341
+keep_alive = 5
+read_timeout = 5
+write_timeout = 5
+log = "critical"
+# secret_key = [randomly generated at launch]
+limits = { forms = 32768 }
