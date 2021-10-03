@@ -1,4 +1,2 @@
-# Rust
-/web
-/target
-.vs
+web/
+target/

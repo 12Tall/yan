@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     outDir: '../web',  // 打包结果输出目录
+  },
+  server: {
+    port: 8341
   }
 })
