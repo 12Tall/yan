@@ -1,15 +1,8 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
-use wry::{
-    self,
-    application::{
-        event::{Event, StartCause, WindowEvent},
-        event_loop::{ControlFlow, EventLoop},
-        window::WindowBuilder,
-    },
-    webview::WebViewBuilder,
-};
+use rfd::{AsyncFileDialog, FileDialog};
+use wry::{self, Value, application::{event::{Event, StartCause, WindowEvent}, event_loop::{ControlFlow, EventLoop}, window::{Window, WindowBuilder}}, http::Response, webview::{RpcRequest, RpcResponse, WebViewBuilder}};
 
-fn main() {
+fn main() {   
     // #[cfg(not(debug_assertions))]
     // 1. 创建窗口事件循环对象
     let evl = EventLoop::new();
@@ -18,7 +11,6 @@ fn main() {
         .with_title("My App")
         .build(&evl)
         .unwrap();
-
     // 3. 在本地窗口种创建webview，并加载
     let web = WebViewBuilder::new(win).unwrap();
 
@@ -63,7 +55,26 @@ fn main() {
         .unwrap()
     };
 
-    let web = web.build().unwrap();
+    
+    let handler = move |window: &Window, mut req: RpcRequest| {
+        let mut response = None;
+        // 解析rpc 的参数
+        println!("{:?}",req.params?.get(0).unwrap().get("message"));
+        if &req.method == "fullscreen" {
+            
+        } else if &req.method == "send-parameters" {       
+            let file = FileDialog::new()
+            .add_filter("text", &["txt", "rs"])
+            .add_filter("rust", &["rs", "toml"])
+            // .set_parent(window)  // 设置父窗口
+            .pick_file()?;
+            let path = file.to_path_buf().into_os_string().into_string().unwrap();
+            response = Some(RpcResponse::new_result(req.id.take(), Some(Value::String(path))));
+        }
+        response
+      };
+
+    let web = web.with_rpc_handler(handler).build().unwrap();
 
     // 4. 设置事件处理
     evl.run(move |evt, _, control_flow| {
@@ -85,4 +96,6 @@ fn main() {
             _ => (),
         }
     });
+
+    
 }
