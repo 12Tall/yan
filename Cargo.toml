@@ -17,4 +17,7 @@ wry = "0.12.2"
 rfd = "0.5.0"
 include_dir = "0.6.2"
 mime = "0.3.16"
-windows = "0.21.1"
+ico = "0.1.0"
+byteorder = "1.4.3"
+
+[build-dependencies]

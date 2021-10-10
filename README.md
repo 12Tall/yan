@@ -57,6 +57,8 @@ export default defineConfig({
 5. PE 文件在`windows.rs`中有定义，基本上所有的类型在这个`binding`中都能找到；
 6. 通过`rfd`调用系统的对话框，但是需要根据平台去设置初始路径、或者干脆不设置；
 7. `Object`对象可以通过`get`方法访问键值；
+8. 修改图标：需要引用`ico`库，详细代码参见[wry/examples/icon.rs](https://github.com/tauri-apps/wry/blob/6ffd1d7194bda9ca1434fa2ca0d0bd0c8237f01f/examples/icon.rs)，需要注意的是源代码没有包含在`wry`库中，且有些类型已重新命名。
+9. 引入`byteorder = "1.4.3"`以二进制的形式读取文件，并可以区分大小端字节序，记得要先将`File`封装为`BufReader`
 
 
 ### 条件编译  
@@ -66,3 +68,7 @@ export default defineConfig({
     - `#[cfg(not(debug_assertions))]`：可以用于任何语句（块）前面  
 2. 取消Windows 下的命令行窗口：
     - 在`main.rs`最上方添加：`#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]`
+
+
+### 有用的库
+1. [二进制文件解析](https://github.com/Geal/nom)
