@@ -1,0 +1,77 @@
+name: build_yan_for_windows
+on:
+  push:
+    branches:
+      - "master"
+jobs:
+  release-all:
+    name: release
+    needs: [build-win]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # 读取json 文件的属性
+      - name: Read Properties
+        id: version             # step_id 在后面会用到
+        uses: ashley-taylor/read-json-property-action@v1.0
+        with:
+          path: ./web_src/package.json  # 文件路径
+          property: version     # 相应的字段
+      - name: create release
+        id: create_release
+        uses: actions/create-release@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          # 根据版本号打标签
+          tag_name: v${{steps.version.outputs.value}}
+          release_name: Release v${{steps.version.outputs.value}}
+          draft: false
+          prerelease: false   
+      - uses: actions/download-artifact@v2
+        with: 
+          name: release
+      - name: upload win
+        id: upload-windows 
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./yan-win.zip
+          asset_name: yan-win.zip
+          asset_content_type: application/zip  
+  
+  build-win:
+    name: build for windows
+    runs-on: windows-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: install rust toolchain
+        uses: actions-rs/toolchain@v1
+        with: 
+          toolchain: stable
+      
+      - name: install node/npm
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: build
+        # 编译后在根目录生成index.node
+        run: |     
+          npm install -g yarn  
+          cd web_src       
+          yarn
+          yarn run build
+          npm uninstall -g yarn
+          cd ../
+          cargo build --release 
+      - name: zip windows artifact
+        run: |
+          powershell Compress-Archive ./target/release/yan.exe yan-win.zip
+      - uses: actions/upload-artifact@v2
+        with:
+          name: release
+          path: ./yan-win.zip  

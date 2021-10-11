@@ -3,6 +3,9 @@ name = "yan"
 version = "0.1.0"
 edition = "2018"
 
+[build]
+target-dir = "../output"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [[bin]]
 name = "yan"    # bin 文件不要与lib 文件重名
@@ -13,6 +16,7 @@ name = "libyan"
 crate-type = ["staticlib", "cdylib"] 
 
 [dependencies]
+single-instance = "0.3.2"
 wry = "0.12.2"
 rfd = "0.5.0"
 include_dir = "0.6.2"
