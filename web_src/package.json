@@ -1,12 +1,19 @@
 {
   "name": "web_src",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
   "dependencies": {
+    "@vue/shared": "^3.2.20",
+    "d3": "^7.1.1",
+    "element-plus": "^1.1.0-beta.20",
+    "function-plot": "^1.22.7",
+    "lodash": "^4.17.21",
+    "nerdamer": "^1.1.12",
+    "three": "^0.133.1",
     "vue": "^3.2.16"
   },
   "devDependencies": {

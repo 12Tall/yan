@@ -8,7 +8,8 @@ use std::{
 };
 use wry::{
     application::{
-        event_loop::{ EventLoop, },
+        dpi::{LogicalSize, PhysicalSize},
+        event_loop::EventLoop,
         window::{Icon, Window, WindowBuilder},
     },
     webview::{RpcRequest, RpcResponse, WebContext, WebView, WebViewBuilder},
@@ -41,6 +42,8 @@ pub fn create_app(icon: Icon) -> (Window, EventLoop<()>) {
 
     let win = WindowBuilder::new()
         .with_title("My App")
+        .with_inner_size(LogicalSize::new(650, 540))
+        .with_resizable(false)
         .with_window_icon(Some(icon))
         .build(&evl)
         .unwrap();
