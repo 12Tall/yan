@@ -1,6 +1,6 @@
 {
   "name": "web_src",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,7 +11,9 @@
     "d3": "^7.1.1",
     "element-plus": "^1.1.0-beta.20",
     "function-plot": "^1.22.7",
+    "katex": "^0.13.20",
     "lodash": "^4.17.21",
+    "mathjs": "^9.5.1",
     "nerdamer": "^1.1.12",
     "three": "^0.133.1",
     "vue": "^3.2.16"

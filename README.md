@@ -53,10 +53,15 @@
 02|jiggzson/nerdamer|数学符号计算库
 03|electron-plus|基于vue3 的前端组件库
 04|@vue/shared|避免Element 编译报错
-05|mauriciopoppe/function-plot|基于D3.js 的函数绘图库（暂不兼容）
+05|mauriciopoppe/function-plot|基于D3.js 的函数绘图库  
 06|lodash|用于生成不重复的随机Id
 07|d3.js|绘图库(不会直接用到)
 08|three.js|三维绘图库(暂时用不到)
+09|katex.js|Latex 渲染
+10|Math.js|用于符号运算
+
+#### 前端组件Id 风格
+统一为`_yan_{组件类型}_{rand_id}`，如：`_yan_D3_1`等。
 
 ## 调试与打包  
 ### 调试  

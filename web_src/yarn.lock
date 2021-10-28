@@ -21,6 +21,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.15.4":
+  version: 7.15.4
+  resolution: "@babel/runtime@npm:7.15.4"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: c40825430400e47c19b97e4142d5315d2910305b9714d44a711472587ee2fd4521fdba5f02ddd9df3902f5e988d9854fa83f4da1e0c091f70f6983fa52480606
+  languageName: node
+  linkType: hard
+
 "@babel/types@npm:^7.8.3":
   version: 7.15.6
   resolution: "@babel/types@npm:7.15.6"
@@ -401,6 +410,20 @@ __metadata:
   version: 7.2.0
   resolution: "commander@npm:7.2.0"
   checksum: 53501cbeee61d5157546c0bef0fedb6cdfc763a882136284bed9a07225f09a14b82d2a84e7637edfd1a679fb35ed9502fd58ef1d091e6287f60d790147f68ddc
+  languageName: node
+  linkType: hard
+
+"commander@npm:^6.0.0":
+  version: 6.2.1
+  resolution: "commander@npm:6.2.1"
+  checksum: d7090410c0de6bc5c67d3ca41c41760d6d268f3c799e530aafb73b7437d1826bbf0d2a3edac33f8b57cc9887b4a986dce307fa5557e109be40eadb7c43b21742
+  languageName: node
+  linkType: hard
+
+"complex.js@npm:^2.0.15":
+  version: 2.0.15
+  resolution: "complex.js@npm:2.0.15"
+  checksum: f39b4ee8f8c507f896e0a0ff440fa52074c15fc4476644c5db730f5da8e6e81a010ef90ea9eda907758737062c944ac6abd4783ff14978a8976aa41e56572e12
   languageName: node
   linkType: hard
 
@@ -921,6 +944,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"decimal.js@npm:^10.3.1":
+  version: 10.3.1
+  resolution: "decimal.js@npm:10.3.1"
+  checksum: 0351ac9f05fe050f23227aa6a4573bee2d58fa7378fcf28d969a8c789525032effb488a90320fd3fe86a66e17b4bc507d811b15eada5b7f0e7ec5d2af4c24a59
+  languageName: node
+  linkType: hard
+
 "delaunator@npm:5":
   version: 5.0.0
   resolution: "delaunator@npm:5.0.0"
@@ -1163,6 +1193,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"escape-latex@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "escape-latex@npm:1.2.0"
+  checksum: 73a787319f0965ecb8244bb38bf3a3cba872f0b9a5d3da8821140e9f39fe977045dc953a62b1a2bed4d12bfccbe75a7d8ec786412bf00739eaa2f627d0a8e0d6
+  languageName: node
+  linkType: hard
+
 "estree-walker@npm:^2.0.2":
   version: 2.0.2
   resolution: "estree-walker@npm:2.0.2"
@@ -1174,6 +1211,13 @@ __metadata:
   version: 3.0.2
   resolution: "extend@npm:3.0.2"
   checksum: a50a8309ca65ea5d426382ff09f33586527882cf532931cb08ca786ea3146c0553310bda688710ff61d7668eba9f96b923fe1420cdf56a2c3eaf30fcab87b515
+  languageName: node
+  linkType: hard
+
+"fraction.js@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "fraction.js@npm:4.1.1"
+  checksum: e5a1f81d73e32aabf4fbd6581a7b3dfabd9a449ceb97c7e71ed2931dd0607095622341100d7819741eb9b435eb4e0d4a040a69e411dc943fa9b3a3872f3a2e0f
   languageName: node
   linkType: hard
 
@@ -1472,6 +1516,24 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"javascript-natural-sort@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "javascript-natural-sort@npm:0.7.1"
+  checksum: 161e2c512cc7884bc055a582c6645d9032cab88497a76123d73cb23bfb03d97a04cf7772ecdb8bd3366fc07192c2f996366f479f725c23ef073fffe03d6a586a
+  languageName: node
+  linkType: hard
+
+"katex@npm:^0.13.20":
+  version: 0.13.20
+  resolution: "katex@npm:0.13.20"
+  dependencies:
+    commander: ^6.0.0
+  bin:
+    katex: cli.js
+  checksum: c4078603ac25cacf7fb3221bfdf6c4a8c2e981c7d3e2e290c2ce24041a9484a01e791a4f21f90a6896d868fa9247c4d5a5600683aaf8a00ad59a54beb5086c1b
+  languageName: node
+  linkType: hard
+
 "lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
@@ -1527,6 +1589,25 @@ fsevents@~2.3.2:
     extend: ^3.0.0
     mr-parser: ^0.2.1
   checksum: c95453699e02ecc546d1e2d66748fc0528cc1666ccd341c8a892d91a0a9a39eff9f803f2337bf6f21413bad4973b47240d5caf30b3ce6b93b60524e1f72e669b
+  languageName: node
+  linkType: hard
+
+"mathjs@npm:^9.5.1":
+  version: 9.5.1
+  resolution: "mathjs@npm:9.5.1"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    complex.js: ^2.0.15
+    decimal.js: ^10.3.1
+    escape-latex: ^1.2.0
+    fraction.js: ^4.1.1
+    javascript-natural-sort: ^0.7.1
+    seedrandom: ^3.0.5
+    tiny-emitter: ^2.1.0
+    typed-function: ^2.0.0
+  bin:
+    mathjs: bin/cli.js
+  checksum: 1b1c96983c513f1ccfd3c0a653ff0e60c603d318c5619072087b67432b6741cc3a192991906d756f3d7372d2a36f3d1c02da443c985171041ec53664c01dfa87
   languageName: node
   linkType: hard
 
@@ -1831,6 +1912,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:^0.13.4":
+  version: 0.13.9
+  resolution: "regenerator-runtime@npm:0.13.9"
+  checksum: 65ed455fe5afd799e2897baf691ca21c2772e1a969d19bb0c4695757c2d96249eb74ee3553ea34a91062b2a676beedf630b4c1551cc6299afb937be1426ec55e
+  languageName: node
+  linkType: hard
+
 "resize-observer-polyfill@npm:^1.5.1":
   version: 1.5.1
   resolution: "resize-observer-polyfill@npm:1.5.1"
@@ -1915,6 +2003,13 @@ resolve@^1.20.0:
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: cab8f25ae6f1434abee8d80023d7e72b598cf1327164ddab31003c51215526801e40b66c5e65d658a0af1e9d6478cadcb4c745f4bd6751f97d8644786c0978b0
+  languageName: node
+  linkType: hard
+
+"seedrandom@npm:^3.0.5":
+  version: 3.0.5
+  resolution: "seedrandom@npm:3.0.5"
+  checksum: 728b56bc3bc1b9ddeabd381e449b51cb31bdc0aa86e27fcd0190cea8c44613d5bcb2f6bb63ed79f78180cbe791c20b8ec31a9627f7b7fc7f476fd2bdb7e2da9f
   languageName: node
   linkType: hard
 
@@ -2070,10 +2165,24 @@ resolve@^1.20.0:
   languageName: node
   linkType: hard
 
+"tiny-emitter@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "tiny-emitter@npm:2.1.0"
+  checksum: fbcfb5145751a0e3b109507a828eb6d6d4501352ab7bb33eccef46e22e9d9ad3953158870a6966a59e57ab7c3f9cfac7cab8521db4de6a5e757012f4677df2dd
+  languageName: node
+  linkType: hard
+
 "to-fast-properties@npm:^2.0.0":
   version: 2.0.0
   resolution: "to-fast-properties@npm:2.0.0"
   checksum: be2de62fe58ead94e3e592680052683b1ec986c72d589e7b21e5697f8744cdbf48c266fa72f6c15932894c10187b5f54573a3bcf7da0bfd964d5caf23d436168
+  languageName: node
+  linkType: hard
+
+"typed-function@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "typed-function@npm:2.0.0"
+  checksum: 8abb39dff088706f454cd3fa3e884ed98b61f28fcae6ea8b0f3b83225ca130d0ee5ab20acc91f820b41773532f0fd4308e25b5b346c9ab6a626bd8b4e83c59dc
   languageName: node
   linkType: hard
 
@@ -2176,7 +2285,9 @@ resolve@^1.20.0:
     d3: ^7.1.1
     element-plus: ^1.1.0-beta.20
     function-plot: ^1.22.7
+    katex: ^0.13.20
     lodash: ^4.17.21
+    mathjs: ^9.5.1
     nerdamer: ^1.1.12
     three: ^0.133.1
     vite: ^2.6.0
