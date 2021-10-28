@@ -10,7 +10,7 @@ import { onMounted, watch, toRaw } from 'vue'
 export default {
     props: ['data', 'title'],
     setup(props) {
-        let rand_id = uniqueId('_func_view_');
+        let rand_id = uniqueId('_yan_func_');
         let option = {
             target: `#${rand_id}`,
             data: []

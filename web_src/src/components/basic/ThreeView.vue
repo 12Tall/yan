@@ -8,7 +8,7 @@ import { ref, onMounted } from 'vue'
 import { uniqueId } from 'lodash'
 export default {
     setup() {
-        let rand_id = ref(uniqueId('yan_three_'));
+        let rand_id = ref(uniqueId('_yan_three_'));
         onMounted(() => {
             const scene = new Three.Scene();
             const camera = new Three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
