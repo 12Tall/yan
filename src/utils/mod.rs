@@ -92,9 +92,19 @@ where
     #[cfg(debug_assertions)]
     let web = web.with_url("http://localhost:8341/").unwrap();
 
-    let mut user_data_dir = PathBuf::from(env::var("appdata").unwrap());
-    user_data_dir.push("yan");
-    let mut webctx = WebContext::new(Some(user_data_dir));
+    let mut webctx = {
+        #[cfg(target_os = "windows")]
+        {
+            let mut user_data_dir = PathBuf::from(env::var("appdata").unwrap());
+            user_data_dir.push("yan");
+            WebContext::new(Some(user_data_dir))
+        }
+        #[cfg(not(target_os = "windows"))]
+        {
+            WebContext::default()
+        }
+    };
+    
     let web = web
         .with_rpc_handler(rpc_handler)
         .with_web_context(&mut webctx)
