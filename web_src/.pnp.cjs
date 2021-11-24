@@ -42,8 +42,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["function-plot", "npm:1.22.7"],
             ["katex", "npm:0.13.20"],
             ["lodash", "npm:4.17.21"],
-            ["mathjs", "npm:9.5.1"],
-            ["nerdamer", "npm:1.1.12"],
+            ["mathjs", "npm:10.0.0"],
+            ["nerdamer", "npm:1.1.13"],
             ["three", "npm:0.133.1"],
             ["vite", "virtual:48dadd1f5e18a5af72a352567303d8621b048f4e89fda83fe6293c2f32a12c32242b635a9d93393b6f8cb243dca35568d9ac281b2a39190cc93593dde353948a#npm:2.6.2"],
             ["vue", "npm:3.2.19"]
@@ -71,10 +71,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@babel/runtime", [
-        ["npm:7.15.4", {
-          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.15.4-52ce5bf6ea-c408254304.zip/node_modules/@babel/runtime/",
+        ["npm:7.16.3", {
+          "packageLocation": "./.yarn/cache/@babel-runtime-npm-7.16.3-b53f079b37-ab8ac88709.zip/node_modules/@babel/runtime/",
           "packageDependencies": [
-            ["@babel/runtime", "npm:7.15.4"],
+            ["@babel/runtime", "npm:7.16.3"],
             ["regenerator-runtime", "npm:0.13.9"]
           ],
           "linkType": "HARD",
@@ -1877,11 +1877,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["mathjs", [
-        ["npm:9.5.1", {
-          "packageLocation": "./.yarn/cache/mathjs-npm-9.5.1-706d9445c4-1b1c96983c.zip/node_modules/mathjs/",
+        ["npm:10.0.0", {
+          "packageLocation": "./.yarn/cache/mathjs-npm-10.0.0-71296ad510-86f4f45804.zip/node_modules/mathjs/",
           "packageDependencies": [
-            ["mathjs", "npm:9.5.1"],
-            ["@babel/runtime", "npm:7.15.4"],
+            ["mathjs", "npm:10.0.0"],
+            ["@babel/runtime", "npm:7.16.3"],
             ["complex.js", "npm:2.0.15"],
             ["decimal.js", "npm:10.3.1"],
             ["escape-latex", "npm:1.2.0"],
@@ -2049,10 +2049,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["nerdamer", [
-        ["npm:1.1.12", {
-          "packageLocation": "./.yarn/cache/nerdamer-npm-1.1.12-af2c5949c6-5ae6af1706.zip/node_modules/nerdamer/",
+        ["npm:1.1.13", {
+          "packageLocation": "./.yarn/cache/nerdamer-npm-1.1.13-4455ffb437-d1665b1acc.zip/node_modules/nerdamer/",
           "packageDependencies": [
-            ["nerdamer", "npm:1.1.12"]
+            ["nerdamer", "npm:1.1.13"]
           ],
           "linkType": "HARD",
         }]
@@ -2667,8 +2667,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["function-plot", "npm:1.22.7"],
             ["katex", "npm:0.13.20"],
             ["lodash", "npm:4.17.21"],
-            ["mathjs", "npm:9.5.1"],
-            ["nerdamer", "npm:1.1.12"],
+            ["mathjs", "npm:10.0.0"],
+            ["nerdamer", "npm:1.1.13"],
             ["three", "npm:0.133.1"],
             ["vite", "virtual:48dadd1f5e18a5af72a352567303d8621b048f4e89fda83fe6293c2f32a12c32242b635a9d93393b6f8cb243dca35568d9ac281b2a39190cc93593dde353948a#npm:2.6.2"],
             ["vue", "npm:3.2.19"]

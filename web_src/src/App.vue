@@ -2,15 +2,17 @@
   <el-container>
     <!-- <el-header></el-header> -->
     <el-main>
-      <FunctionView></FunctionView>
+      <!-- <FunctionView></FunctionView> -->
+      <MGFView></MGFView>
     </el-main>
   </el-container>
 </template>
 
 <script>
 import FunctionView from "./components/FunctionView.vue";
+import MGFView from "./components/MGFView.vue";
 export default {
-  components: { FunctionView },
+  components: { FunctionView, MGFView },
   setup() {
   }
 }
